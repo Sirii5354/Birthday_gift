@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Cards</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="script.js" defer></script>
+
+</head>
+<body>
+    
+
+
+
+
+
+
+    <!-- Login Page -->
+    <div id="login-page" class="page">
+        <div class="login-container">
+            <div class="login-card">
+                <div class="logo-container">
+                    <div class="logo">
+                        <i data-lucide="log-in"></i>
+                    </div>
+                    <h2>Hello Aunty Garu😁</h2>
+                    <p>Birthday gift kosam lopaliki vellandi😊😊</p>
+                </div>
+
+                <form id="login-form" class="login-form">
+                    <div class="input-group">
+                        <i data-lucide="user" class="input-icon"></i>
+                        <input type="text" id="username" placeholder="Username" required>
+                    </div>
+
+                    <div class="input-group">
+                        <i data-lucide="lock" class="input-icon"></i>
+                        <input type="password" id="password" placeholder="Password" required>
+                    </div>
+
+                    <div id="error-message" class="error-message"></div>
+
+                    <button type="submit" class="login-button">Sign In</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Birthday Cards Page -->
+    <div id="birthday-page" class="page hidden">
+        
+        
+        <div class="cards-container">
+            <audio id="birthday-music" loop>
+                <source src="Birthday.mp3" type="audio/mpeg">
+            </audio>
+            <div class="music-controls" id="music-controls">
+                <button id="toggle-music" title="Toggle Music" onclick="pl()">🔊</button>
+            </div>
+
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="pic (1).jpeg" alt="Birthday">
+                        <div class="content-overlay">
+                            <h2>Happy Birthday Sushma</h2>
+                            <i data-lucide="heart" class="heart-icon"></i>
+                        </div>
+                    </div>
+                    <div class="card-back">
+                        <p>Many more happy returns of the day Sirii Aunty 🎉❤️</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="pic (2).jpeg" alt="Birthday">
+                        <div class="content-overlay">
+                            <h2>Happy Birthday Sirii</h2>
+                            <i data-lucide="heart" class="heart-icon"></i>
+                        </div>
+                    </div>
+                    <div class="card-back">
+                        <p>Nuvu life long pilla papallatho asta kastalu padali ani aa god ki na prayer 😁😅
+                            Nuvu eepudu kuda naku cake mukka pattaladhu anuko ninnu champi nanu potha jail ki 😉
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Add 3 more identical cards with different images -->
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="pic (3).jpeg" alt="Birthday">
+                        <div class="content-overlay">
+                            <h2>Happy Birthday Aunty</h2>
+                            <i data-lucide="heart" class="heart-icon"></i>
+                        </div>
+                    </div>
+                    <div class="card-back">
+                        <p>Jokes apart, life ni happy ga lead chay, apudu aa face medha naku smile aa kanipinchali. anni kastalu vachina be strong 💪🫶</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="pic (6).jpeg" alt="Birthday">
+                        <div class="content-overlay">
+                            <h2>Happy Birthday Sushi</h2>
+                            <i data-lucide="heart" class="heart-icon"></i>
+                        </div>
+                    </div>
+                    <div class="card-back">
+                        <p>Life lo nuvu succes avali ani manaspurthiga korukuntunanu. Apudu apudu nannu kuda gurthuku pattuko mana friendship apudu ela naa undali ani korukuntunanu 💌💖</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="pic (7).jpeg" alt="Birthday">
+                        <div class="content-overlay">
+                            <h2>Happy Birthday Sirii Aunty</h2>
+                            <i data-lucide="heart" class="heart-icon"></i>
+                        </div>
+                    </div>
+                    <div class="card-back">
+                        <p>Once again Happy Birthday Sirii Aunty 🥰🥳🎉</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <canvas id="particle-canvas"></canvas>
+    
+</body>
+</html>
+
+
+
